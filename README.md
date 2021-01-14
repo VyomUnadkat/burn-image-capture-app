@@ -1,1 +1,0 @@
-# burn-image-capture-app

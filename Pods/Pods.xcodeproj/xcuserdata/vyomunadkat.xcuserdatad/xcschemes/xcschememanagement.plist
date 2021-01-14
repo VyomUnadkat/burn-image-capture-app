@@ -74,21 +74,21 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>Pods-burn-burnUITests.xcscheme</key>
+		<key>Pods-medicalApp-medicalAppUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
-		<key>Pods-burn.xcscheme</key>
+		<key>Pods-medicalApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
-		<key>Pods-burnTests.xcscheme</key>
+		<key>Pods-medicalAppTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

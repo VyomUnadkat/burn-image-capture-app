@@ -1,6 +1,0 @@
-framework module Pods_burn_burnUITests {
-  umbrella header "Pods-burn-burnUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
