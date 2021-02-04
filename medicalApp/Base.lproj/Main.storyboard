@@ -402,7 +402,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE9-al-Ybz">
-                                <rect key="frame" x="20" y="560" width="374" height="30"/>
+                                <rect key="frame" x="20" y="671" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Capture Image">
@@ -413,7 +413,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYB-qb-tCg">
-                                <rect key="frame" x="183" y="617" width="49" height="30"/>
+                                <rect key="frame" x="183" y="709" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Upload"/>
                                 <connections>
@@ -421,23 +421,37 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7YM-0j-3U7">
-                                <rect key="frame" x="132" y="691" width="150" height="4"/>
+                                <rect key="frame" x="132" y="766" width="150" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fP7-ir-GVo">
+                                <rect key="frame" x="20" y="529" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t66-WV-JUd">
+                                <rect key="frame" x="20" y="587" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="x0j-ec-Brt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" selectedImage="camera" id="TFh-VW-J7e"/>
                     <connections>
+                        <outlet property="imagedescription" destination="t66-WV-JUd" id="WYi-bv-9Nv"/>
                         <outlet property="myimageview" destination="Fvv-Qw-Qlg" id="PaA-Gg-rWM"/>
+                        <outlet property="patientname" destination="fP7-ir-GVo" id="V86-ef-Iu3"/>
                         <outlet property="progressBar" destination="7YM-0j-3U7" id="o6i-aC-5Oz"/>
                         <outlet property="uploadButton" destination="nYB-qb-tCg" id="FnH-5f-l8v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAK-4H-ae9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586" y="868"/>
+            <point key="canvasLocation" x="3585.507246376812" y="867.85714285714278"/>
         </scene>
     </scenes>
     <resources>
