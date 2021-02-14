@@ -63,7 +63,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
                             if let urlText = url?.absoluteString {
                                 print("this  is the url")
                                 print(urlText)
-                                self.ref.child("users").child(randomID).setValue(["name": self.patientname.text!, "description": self.imagedescription.text!, "url": urlText])
+                                self.ref.child("users").child(randomID).setValue(["name": self.patientname.text!, "tag": self.imagedescription.text!, "url": urlText])
                             return
                             }
                         })
@@ -74,24 +74,6 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             print("You are \(pctThere) complete")
             self?.progressBar.progress = Float(pctThere)
         }
-        
-        
-        // Fetch the download URL
-        
-        
-       
-      
-        
-       
-        
-        
-        
-        
-
-        
-        
-        
-
     }
         
     override func viewDidLoad() {
@@ -102,6 +84,15 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
+
+        self.tabBarController?.title = "Camera"
+        self.tabBarController?.navigationItem.rightBarButtonItem = nil
+        
+        self.tabBarController?.navigationItem.leftBarButtonItem = nil
+    }
 
 }
 

@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
 
         self.tabBarController?.title = "Profile"
         self.tabBarController?.navigationItem.rightBarButtonItem = nil

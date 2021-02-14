@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,7 +22,10 @@
 		2D2B9576259F82EF001EEF07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B9575259F82EF001EEF07 /* DetailViewController.swift */; };
 		2D561C2825B0527600C3EBDF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561C2725B0527600C3EBDF /* CameraViewController.swift */; };
 		2D561C3325B0545B00C3EBDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */; };
+		2D6C29F625D93C5D00EDF8F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */; };
 		2DC45D9925A24C59006EA8A2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC45D9825A24C59006EA8A2 /* WelcomeViewController.swift */; };
+		2DDDC0E125D906A5001C143B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC0E025D906A5001C143B /* UserViewController.swift */; };
+		2DDDC0E925D910A4001C143B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC0E825D910A4001C143B /* User.swift */; };
 		8FBBF6B0667CBF9CC0410B6D /* Pods_medicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C89C2E33D0AE6DA7254D770 /* Pods_medicalApp.framework */; };
 		B947BCB825ACD605A80BEFF6 /* Pods_medicalAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE64F41ACF262C55A06ADA8 /* Pods_medicalAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +70,10 @@
 		2D2B9575259F82EF001EEF07 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2D561C2725B0527600C3EBDF /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2DC45D9825A24C59006EA8A2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2DDDC0E025D906A5001C143B /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		2DDDC0E825D910A4001C143B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6EF228FFFD542974D5C4CF1D /* Pods-medicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medicalAppTests.release.xcconfig"; path = "Target Support Files/Pods-medicalAppTests/Pods-medicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		757142400B4F16E34869C8D3 /* Pods-medicalAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medicalAppTests.debug.xcconfig"; path = "Target Support Files/Pods-medicalAppTests/Pods-medicalAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE64F41ACF262C55A06ADA8 /* Pods_medicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,10 +136,13 @@
 		2D2B9541259F80DE001EEF07 /* medicalApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D6C29F425D93C5000EDF8F4 /* Helpers */,
+				2DDDC0E825D910A4001C143B /* User.swift */,
 				2D2B9542259F80DE001EEF07 /* AppDelegate.swift */,
 				2D2B9544259F80DE001EEF07 /* SceneDelegate.swift */,
 				2D2B9546259F80DE001EEF07 /* ViewController.swift */,
 				2D2B9548259F80DE001EEF07 /* Main.storyboard */,
+				2DDDC0E025D906A5001C143B /* UserViewController.swift */,
 				2D04043B25A08A21005AA38F /* ProfileViewController.swift */,
 				2D561C2725B0527600C3EBDF /* CameraViewController.swift */,
 				2D04043625A0870C005AA38F /* SettingsViewController.swift */,
@@ -166,6 +175,14 @@
 			path = medicalAppUITests;
 			sourceTree = "<group>";
 		};
+		2D6C29F425D93C5000EDF8F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D113084CBCF9A95D89A4D4E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +203,6 @@
 				757142400B4F16E34869C8D3 /* Pods-medicalAppTests.debug.xcconfig */,
 				6EF228FFFD542974D5C4CF1D /* Pods-medicalAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -431,12 +447,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D04043C25A08A21005AA38F /* ProfileViewController.swift in Sources */,
+				2DDDC0E125D906A5001C143B /* UserViewController.swift in Sources */,
 				2D2B9547259F80DE001EEF07 /* ViewController.swift in Sources */,
 				2D2B9543259F80DE001EEF07 /* AppDelegate.swift in Sources */,
+				2D6C29F625D93C5D00EDF8F4 /* Extensions.swift in Sources */,
 				2D2B9545259F80DE001EEF07 /* SceneDelegate.swift in Sources */,
 				2D04043725A0870C005AA38F /* SettingsViewController.swift in Sources */,
 				2D561C2825B0527600C3EBDF /* CameraViewController.swift in Sources */,
 				2D2B9576259F82EF001EEF07 /* DetailViewController.swift in Sources */,
+				2DDDC0E925D910A4001C143B /* User.swift in Sources */,
 				2DC45D9925A24C59006EA8A2 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
