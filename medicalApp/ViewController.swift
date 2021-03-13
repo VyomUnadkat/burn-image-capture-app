@@ -8,19 +8,37 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
+    @IBOutlet weak var email: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        email.overrideUserInterfaceStyle = .light
+        password.overrideUserInterfaceStyle = .light
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-         view.addGestureRecognizer(tapGesture)
-        // Do any additional setup after loading the view.
+        view.addGestureRecognizer(tapGesture)
+        
     }
     
 
-
     @IBAction func signInOnClick(_ sender: UIButton) {
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "tabbarcontroller") as! UITabBarController
-        self.navigationController?.pushViewController(detailVC, animated: true)
+//        self.navigationController?.pushViewController(detailVC, animated: true)
+        if email.text == "test1@usc.edu" && password.text == "trojan"{
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
+        else{
+                    let alert = UIAlertController(title: "Invalid credentials", message: "Please enter the correct Email Id and Password.", preferredStyle: UIAlertController.Style.alert)
+
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+        }
 
     }
     

@@ -44,22 +44,10 @@ class UserViewController: UITableViewController {
                             self.tableView.reloadData()
                         }
                     }
-                    
                 }
-                
-                
-                //print(snapshot)
-                
             }, withCancel: nil)
         }
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        self.tabBarController?.navigationItem.hidesBackButton = true
-//    }
-
-    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -80,26 +68,7 @@ class UserViewController: UITableViewController {
         if let profileImage = users.url{
             
             cell.profileImageView.loadimagefromcache(urlString: profileImage)
-//            let url = NSURL(string: profileImage)
-//            URLSession.shared.dataTask(with: url! as URL, completionHandler:{(data, response, error) in
-//
-//                if error != nil{
-//                    print(error)
-//                    return
-//                }
-//
-//                DispatchQueue.global(qos: .background).async {
-//                    DispatchQueue.main.async {
-//                        cell.profileImageView.image = UIImage(data: data!)
-//                        //cell.imageView?.image = UIImage(data: data!)
-//                    }
-//                }
-//
-//            }).resume()
         }
-        
-        
-        
             return cell
         }
     
@@ -160,7 +129,7 @@ class UICell: UITableViewCell{
         profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         profileImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 350).isActive = true
-        profileImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        //profileImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         //profileImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 30).isActive = true
         
         

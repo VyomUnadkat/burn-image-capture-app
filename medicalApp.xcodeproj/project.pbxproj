@@ -24,6 +24,9 @@
 		2D561C3325B0545B00C3EBDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */; };
 		2D6C29F625D93C5D00EDF8F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */; };
 		2DC45D9925A24C59006EA8A2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC45D9825A24C59006EA8A2 /* WelcomeViewController.swift */; };
+		2DCF63C725F22DFE0094BEB7 /* CutomizedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF63C625F22DFE0094BEB7 /* CutomizedTableViewCell.swift */; };
+		2DD6A7A325F0E665003A56B3 /* Allpatients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6A7A225F0E665003A56B3 /* Allpatients.swift */; };
+		2DD6A7B025F10CFC003A56B3 /* Individualpatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6A7AF25F10CFC003A56B3 /* Individualpatient.swift */; };
 		2DDDC0E125D906A5001C143B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC0E025D906A5001C143B /* UserViewController.swift */; };
 		2DDDC0E925D910A4001C143B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC0E825D910A4001C143B /* User.swift */; };
 		8FBBF6B0667CBF9CC0410B6D /* Pods_medicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C89C2E33D0AE6DA7254D770 /* Pods_medicalApp.framework */; };
@@ -72,6 +75,9 @@
 		2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2DC45D9825A24C59006EA8A2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2DCF63C625F22DFE0094BEB7 /* CutomizedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomizedTableViewCell.swift; sourceTree = "<group>"; };
+		2DD6A7A225F0E665003A56B3 /* Allpatients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allpatients.swift; sourceTree = "<group>"; };
+		2DD6A7AF25F10CFC003A56B3 /* Individualpatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Individualpatient.swift; sourceTree = "<group>"; };
 		2DDDC0E025D906A5001C143B /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2DDDC0E825D910A4001C143B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6EF228FFFD542974D5C4CF1D /* Pods-medicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medicalAppTests.release.xcconfig"; path = "Target Support Files/Pods-medicalAppTests/Pods-medicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,8 +148,11 @@
 				2D2B9544259F80DE001EEF07 /* SceneDelegate.swift */,
 				2D2B9546259F80DE001EEF07 /* ViewController.swift */,
 				2D2B9548259F80DE001EEF07 /* Main.storyboard */,
+				2DCF63C625F22DFE0094BEB7 /* CutomizedTableViewCell.swift */,
 				2DDDC0E025D906A5001C143B /* UserViewController.swift */,
 				2D04043B25A08A21005AA38F /* ProfileViewController.swift */,
+				2DD6A7A225F0E665003A56B3 /* Allpatients.swift */,
+				2DD6A7AF25F10CFC003A56B3 /* Individualpatient.swift */,
 				2D561C2725B0527600C3EBDF /* CameraViewController.swift */,
 				2D04043625A0870C005AA38F /* SettingsViewController.swift */,
 				2D2B9575259F82EF001EEF07 /* DetailViewController.swift */,
@@ -451,10 +460,13 @@
 				2D2B9547259F80DE001EEF07 /* ViewController.swift in Sources */,
 				2D2B9543259F80DE001EEF07 /* AppDelegate.swift in Sources */,
 				2D6C29F625D93C5D00EDF8F4 /* Extensions.swift in Sources */,
+				2DD6A7B025F10CFC003A56B3 /* Individualpatient.swift in Sources */,
+				2DCF63C725F22DFE0094BEB7 /* CutomizedTableViewCell.swift in Sources */,
 				2D2B9545259F80DE001EEF07 /* SceneDelegate.swift in Sources */,
 				2D04043725A0870C005AA38F /* SettingsViewController.swift in Sources */,
 				2D561C2825B0527600C3EBDF /* CameraViewController.swift in Sources */,
 				2D2B9576259F82EF001EEF07 /* DetailViewController.swift in Sources */,
+				2DD6A7A325F0E665003A56B3 /* Allpatients.swift in Sources */,
 				2DDDC0E925D910A4001C143B /* User.swift in Sources */,
 				2DC45D9925A24C59006EA8A2 /* WelcomeViewController.swift in Sources */,
 			);
