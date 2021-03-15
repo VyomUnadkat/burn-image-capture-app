@@ -7,6 +7,7 @@ target 'medicalApp' do
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
+  pod 'InstaZoom'
   
 
   # Pods for medicalApp

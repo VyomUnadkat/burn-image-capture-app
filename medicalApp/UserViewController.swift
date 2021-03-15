@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-
 class UserViewController: UITableViewController {
     
     
@@ -15,6 +14,7 @@ class UserViewController: UITableViewController {
     var user = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         tableView.register(UICell.self, forCellReuseIdentifier: cellId)
         //tableView.rowHeight = UITableView.automaticDimension
@@ -64,6 +64,7 @@ class UserViewController: UITableViewController {
             cell.detailTextLabel?.text = users.tag
         cell.imageView?.contentMode = .scaleAspectFill
         cell.layoutSubviews()
+
         
         if let profileImage = users.url{
             
@@ -131,7 +132,6 @@ class UICell: UITableViewCell{
         profileImageView.heightAnchor.constraint(equalToConstant: 350).isActive = true
         //profileImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         //profileImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 30).isActive = true
-        
         
         messageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         messageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true

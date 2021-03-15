@@ -20,6 +20,7 @@
 		2D2B955A259F80DF001EEF07 /* medicalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B9559259F80DF001EEF07 /* medicalAppTests.swift */; };
 		2D2B9565259F80DF001EEF07 /* medicalAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B9564259F80DF001EEF07 /* medicalAppUITests.swift */; };
 		2D2B9576259F82EF001EEF07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B9575259F82EF001EEF07 /* DetailViewController.swift */; };
+		2D51253625FE4F37002D6F4D /* IndividualImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51253525FE4F37002D6F4D /* IndividualImage.swift */; };
 		2D561C2825B0527600C3EBDF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561C2725B0527600C3EBDF /* CameraViewController.swift */; };
 		2D561C3325B0545B00C3EBDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */; };
 		2D6C29F625D93C5D00EDF8F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */; };
@@ -71,6 +72,7 @@
 		2D2B9564259F80DF001EEF07 /* medicalAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicalAppUITests.swift; sourceTree = "<group>"; };
 		2D2B9566259F80DF001EEF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D2B9575259F82EF001EEF07 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2D51253525FE4F37002D6F4D /* IndividualImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualImage.swift; sourceTree = "<group>"; };
 		2D561C2725B0527600C3EBDF /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				2D04043B25A08A21005AA38F /* ProfileViewController.swift */,
 				2DD6A7A225F0E665003A56B3 /* Allpatients.swift */,
 				2DD6A7AF25F10CFC003A56B3 /* Individualpatient.swift */,
+				2D51253525FE4F37002D6F4D /* IndividualImage.swift */,
 				2D561C2725B0527600C3EBDF /* CameraViewController.swift */,
 				2D04043625A0870C005AA38F /* SettingsViewController.swift */,
 				2D2B9575259F82EF001EEF07 /* DetailViewController.swift */,
@@ -459,6 +462,7 @@
 				2DDDC0E125D906A5001C143B /* UserViewController.swift in Sources */,
 				2D2B9547259F80DE001EEF07 /* ViewController.swift in Sources */,
 				2D2B9543259F80DE001EEF07 /* AppDelegate.swift in Sources */,
+				2D51253625FE4F37002D6F4D /* IndividualImage.swift in Sources */,
 				2D6C29F625D93C5D00EDF8F4 /* Extensions.swift in Sources */,
 				2DD6A7B025F10CFC003A56B3 /* Individualpatient.swift in Sources */,
 				2DCF63C725F22DFE0094BEB7 /* CutomizedTableViewCell.swift in Sources */,
@@ -526,6 +530,7 @@
 		2D2B9567259F80DF001EEF07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -587,6 +592,7 @@
 		2D2B9568259F80DF001EEF07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -643,19 +649,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 115FF94801AADAD0C8E9877D /* Pods-medicalApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
 				INFOPLIST_FILE = medicalApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = vyom.burn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -663,15 +669,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FEBE4957FD8FC864307EA92 /* Pods-medicalApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
 				INFOPLIST_FILE = medicalApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = vyom.burn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -683,7 +688,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 757142400B4F16E34869C8D3 /* Pods-medicalAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
@@ -706,7 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EF228FFFD542974D5C4CF1D /* Pods-medicalAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
@@ -729,7 +734,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FEDF2C6515E0DD67525642EF /* Pods-medicalApp-medicalAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
 				INFOPLIST_FILE = medicalAppUITests/Info.plist;
@@ -750,7 +755,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4A552D09947ED2E5C039970 /* Pods-medicalApp-medicalAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
 				INFOPLIST_FILE = medicalAppUITests/Info.plist;

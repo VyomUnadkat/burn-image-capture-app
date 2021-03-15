@@ -7,6 +7,7 @@
 
 import UIKit
 
+import InstaZoom
 class CutomizedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myimage: UIImageView!

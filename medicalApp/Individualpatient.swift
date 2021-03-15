@@ -8,10 +8,12 @@
 import UIKit
 import Firebase
 
-
+import InstaZoom
 
 
 class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    var datatopass: String?
     
     @IBOutlet weak var tableView: UITableView!
     let cellId = "cellId"
@@ -25,38 +27,66 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "detailimage", sender: self)
+//    }
 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+        print(user[indexPath.row].url)
+        
+        performSegue(withIdentifier: "detailimage", sender: self)
+        
+       
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? IndividualImage{
+            destination.myStringValue = user[tableView.indexPathForSelectedRow!.row]
+        }
+    }
+    
+    
+    
+   
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CutomizedTableViewCell
         cell.mytag?.text = user[indexPath.row].tag?.capitalized
-        
-        //let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-//        cell.textLabel?.text = user[indexPath.row].tag?.capitalized
-//        cell.detailTextLabel?.text = user[indexPath.row].tag?.capitalized
-//        cell.imageView?.contentMode = .scaleAspectFill
-//        cell.layoutSubviews()
+        cell.selectionStyle = .none
+        cell.myimage.isPinchable = true
+        var usertopass = user[indexPath.row].url
+        self.datatopass = usertopass
         
         if let profileImage = user[indexPath.row].url{
-            
-            //cell.imageView?.imageFromServerURL(urlString: user[indexPath.row].url!, PlaceHolderImage: UIImage.init(named: "imagename")! )
-            
-            cell.myimage.loadimagefromcache(urlString: profileImage)
-            
-            //cell.imageView?.loadimagefromcache(urlString: profileImage)
+            cell.myimage?.loadimagefromcache(urlString: profileImage)
         }
+        
+        
+        
         return cell
+        
     }
     
+    
+    
     var nameofpatient: User?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = nameofpatient?.name as? String
         tableView.delegate = self
         tableView.dataSource = self
-        
-        tableView.register(UICell.self, forCellReuseIdentifier: cellId)
+        self.datatopass = ""
+        tableView.register(CutomizedTableViewCell.self, forCellReuseIdentifier: cellId)
+        //tableView.register(UICell.self, forCellReuseIdentifier: cellId)
         
         getpatients()
 

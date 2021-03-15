@@ -67,6 +67,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.1.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.5.0)
+  - InstaZoom (0.0.2)
   - leveldb-library (1.22)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - InstaZoom
 
 SPEC REPOS:
   trunk:
@@ -93,6 +95,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
+    - InstaZoom
     - leveldb-library
     - nanopb
     - PromisesObjC
@@ -109,10 +112,11 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 116c84c4bdeb76be2a7a46de51244368f9794eab
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  InstaZoom: 96daa051cd6cc84c57ece00e89f1a30e9e0d9f60
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 4d0c3a2e127a6732353ed9c02c368d58c0ce4919
+PODFILE CHECKSUM: 452ed0e6932bf0a6f4fa42228f80932e90f73a94
 
 COCOAPODS: 1.10.0

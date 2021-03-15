@@ -1,0 +1,6 @@
+framework module InstaZoom {
+  umbrella header "InstaZoom-umbrella.h"
+
+  export *
+  module * { export * }
+}
