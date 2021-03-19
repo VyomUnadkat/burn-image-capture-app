@@ -8,6 +8,7 @@ target 'medicalApp' do
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'InstaZoom'
+  pod 'IQKeyboardManagerSwift'
   
 
   # Pods for medicalApp

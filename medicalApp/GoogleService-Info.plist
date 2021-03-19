@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>657874759352-ui181va7frac48nihuhdnqrtdd1bpu1v.apps.googleusercontent.com</string>
+	<string>977938980208-r47ka72gdut9lo9fk1vumom0qquc41e8.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.657874759352-ui181va7frac48nihuhdnqrtdd1bpu1v</string>
+	<string>com.googleusercontent.apps.977938980208-r47ka72gdut9lo9fk1vumom0qquc41e8</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBYtg8kniawxkwJg52E6w48L_fqKPm7HIA</string>
+	<string>AIzaSyAVkvMshTjNDz7aragjb2qnIz49hLnEq4o</string>
 	<key>GCM_SENDER_ID</key>
-	<string>657874759352</string>
+	<string>977938980208</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>vyom.burn</string>
+	<string>burnprediction.burn</string>
 	<key>PROJECT_ID</key>
-	<string>burn-5b708</string>
+	<string>burnprediction-3d0b9</string>
 	<key>STORAGE_BUCKET</key>
-	<string>burn-5b708.appspot.com</string>
+	<string>burnprediction-3d0b9.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:657874759352:ios:c670c6e867a380fcce4e4d</string>
+	<string>1:977938980208:ios:0579a6f5370bf8592403b5</string>
 </dict>
 </plist>

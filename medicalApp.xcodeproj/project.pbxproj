@@ -22,7 +22,6 @@
 		2D2B9576259F82EF001EEF07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B9575259F82EF001EEF07 /* DetailViewController.swift */; };
 		2D51253625FE4F37002D6F4D /* IndividualImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51253525FE4F37002D6F4D /* IndividualImage.swift */; };
 		2D561C2825B0527600C3EBDF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D561C2725B0527600C3EBDF /* CameraViewController.swift */; };
-		2D561C3325B0545B00C3EBDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */; };
 		2D6C29F625D93C5D00EDF8F4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */; };
 		2DC45D9925A24C59006EA8A2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC45D9825A24C59006EA8A2 /* WelcomeViewController.swift */; };
 		2DCF63C725F22DFE0094BEB7 /* CutomizedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF63C625F22DFE0094BEB7 /* CutomizedTableViewCell.swift */; };
@@ -30,6 +29,10 @@
 		2DD6A7B025F10CFC003A56B3 /* Individualpatient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6A7AF25F10CFC003A56B3 /* Individualpatient.swift */; };
 		2DDDC0E125D906A5001C143B /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC0E025D906A5001C143B /* UserViewController.swift */; };
 		2DDDC0E925D910A4001C143B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC0E825D910A4001C143B /* User.swift */; };
+		2DFA968426049E630096ED98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA968326049E630096ED98 /* GoogleService-Info.plist */; };
+		2DFA968526049E630096ED98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA968326049E630096ED98 /* GoogleService-Info.plist */; };
+		2DFA968626049E630096ED98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFA968326049E630096ED98 /* GoogleService-Info.plist */; };
+		2DFA96B82604AFCF0096ED98 /* changedescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFA96B72604AFCF0096ED98 /* changedescription.swift */; };
 		8FBBF6B0667CBF9CC0410B6D /* Pods_medicalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C89C2E33D0AE6DA7254D770 /* Pods_medicalApp.framework */; };
 		B947BCB825ACD605A80BEFF6 /* Pods_medicalAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE64F41ACF262C55A06ADA8 /* Pods_medicalAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,7 +77,6 @@
 		2D2B9575259F82EF001EEF07 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2D51253525FE4F37002D6F4D /* IndividualImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualImage.swift; sourceTree = "<group>"; };
 		2D561C2725B0527600C3EBDF /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D6C29F525D93C5D00EDF8F4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2DC45D9825A24C59006EA8A2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2DCF63C625F22DFE0094BEB7 /* CutomizedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomizedTableViewCell.swift; sourceTree = "<group>"; };
@@ -82,6 +84,8 @@
 		2DD6A7AF25F10CFC003A56B3 /* Individualpatient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Individualpatient.swift; sourceTree = "<group>"; };
 		2DDDC0E025D906A5001C143B /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2DDDC0E825D910A4001C143B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2DFA968326049E630096ED98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DFA96B72604AFCF0096ED98 /* changedescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = changedescription.swift; sourceTree = "<group>"; };
 		6EF228FFFD542974D5C4CF1D /* Pods-medicalAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medicalAppTests.release.xcconfig"; path = "Target Support Files/Pods-medicalAppTests/Pods-medicalAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		757142400B4F16E34869C8D3 /* Pods-medicalAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medicalAppTests.debug.xcconfig"; path = "Target Support Files/Pods-medicalAppTests/Pods-medicalAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE64F41ACF262C55A06ADA8 /* Pods_medicalAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_medicalAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +160,7 @@
 				2DD6A7A225F0E665003A56B3 /* Allpatients.swift */,
 				2DD6A7AF25F10CFC003A56B3 /* Individualpatient.swift */,
 				2D51253525FE4F37002D6F4D /* IndividualImage.swift */,
+				2DFA96B72604AFCF0096ED98 /* changedescription.swift */,
 				2D561C2725B0527600C3EBDF /* CameraViewController.swift */,
 				2D04043625A0870C005AA38F /* SettingsViewController.swift */,
 				2D2B9575259F82EF001EEF07 /* DetailViewController.swift */,
@@ -164,7 +169,7 @@
 				2D04044025A103A4005AA38F /* Screenshot 2021-01-03 at 1.08.29 AM.png */,
 				2D2B9550259F80DF001EEF07 /* Info.plist */,
 				2DC45D9825A24C59006EA8A2 /* WelcomeViewController.swift */,
-				2D561C3225B0545B00C3EBDF /* GoogleService-Info.plist */,
+				2DFA968326049E630096ED98 /* GoogleService-Info.plist */,
 			);
 			path = medicalApp;
 			sourceTree = "<group>";
@@ -328,7 +333,7 @@
 			files = (
 				2D2B954F259F80DF001EEF07 /* LaunchScreen.storyboard in Resources */,
 				2D2B954C259F80DF001EEF07 /* Assets.xcassets in Resources */,
-				2D561C3325B0545B00C3EBDF /* GoogleService-Info.plist in Resources */,
+				2DFA968426049E630096ED98 /* GoogleService-Info.plist in Resources */,
 				2D04044125A103A4005AA38F /* Screenshot 2021-01-03 at 1.08.29 AM.png in Resources */,
 				2D2B954A259F80DE001EEF07 /* Main.storyboard in Resources */,
 			);
@@ -338,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFA968526049E630096ED98 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFA968626049E630096ED98 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +477,7 @@
 				2D04043725A0870C005AA38F /* SettingsViewController.swift in Sources */,
 				2D561C2825B0527600C3EBDF /* CameraViewController.swift in Sources */,
 				2D2B9576259F82EF001EEF07 /* DetailViewController.swift in Sources */,
+				2DFA96B82604AFCF0096ED98 /* changedescription.swift in Sources */,
 				2DD6A7A325F0E665003A56B3 /* Allpatients.swift in Sources */,
 				2DDDC0E925D910A4001C143B /* User.swift in Sources */,
 				2DC45D9925A24C59006EA8A2 /* WelcomeViewController.swift in Sources */,
@@ -657,7 +665,7 @@
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
 				INFOPLIST_FILE = medicalApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = vyom.burn;
+				PRODUCT_BUNDLE_IDENTIFIER = burnprediction.burn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -677,7 +685,7 @@
 				DEVELOPMENT_TEAM = AZ2TTPG6WM;
 				INFOPLIST_FILE = medicalApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = vyom.burn;
+				PRODUCT_BUNDLE_IDENTIFIER = burnprediction.burn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

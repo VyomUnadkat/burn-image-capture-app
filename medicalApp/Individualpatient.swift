@@ -14,7 +14,7 @@ import InstaZoom
 class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var datatopass: String?
-    
+    @IBOutlet weak var searchbaritem: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     let cellId = "cellId"
     var uniquevalues = [String]()
@@ -48,6 +48,9 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
             destination.myStringValue = user[tableView.indexPathForSelectedRow!.row]
         }
     }
+    
+    
+    
     
     
     
@@ -96,8 +99,23 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
         // Do any additional setup after loading the view.
     }
     
+    @objc func menuButtonTapped(sender: UIBarButtonItem) {
+
+        let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "CameraViewController") as! CameraViewController
+        detailVC.valuetolabel = nameofpatient?.name
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(menuButtonTapped(sender:)))
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor.init(red: 6/255, green: 155/255, blue: 158/255, alpha: 1.0)
+        
+    
+    }
+    
     func getpatients(){
-            Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
+            Database.database().reference().child("users").queryOrdered(byChild: "tag").observe(.childAdded, with: { (snapshot) in
                 let namevalue = snapshot.value as? [String: AnyObject]
                 if self.uniquevalues.contains(namevalue?["name"] as! String){
                     if let dictionaryy = snapshot.value as? [String: AnyObject]{
@@ -108,7 +126,8 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
                     user.name = dictionaryy["name"] as! String
                     user.tag = dictionaryy["tag"] as! String
                     user.url = dictionaryy["url"] as! String
-                    print(user.name, user.tag, user.url)
+                    user.uniquevalue = dictionaryy["id"] as! String
+                        print(user.name, user.tag, user.url, user.uniquevalue)
                     print("now next")
                     print(user)
                 }

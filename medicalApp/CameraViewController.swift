@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
 
     
     @IBOutlet weak var imagedescription: UITextField!
@@ -17,6 +17,8 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var myimageview: UIImageView!
 
+    
+    var valuetolabel: String?
     var ref: DatabaseReference!
     @IBAction func importbtn(_ sender: Any) {
         progressBar.isHidden = true
@@ -63,7 +65,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
                             if let urlText = url?.absoluteString {
                                 print("this  is the url")
                                 print(urlText)
-                                self.ref.child("users").child(randomID).setValue(["name": self.patientname.text!, "tag": self.imagedescription.text!, "url": urlText])
+                                self.ref.child("users").child(randomID).setValue(["id": randomID, "name": self.patientname.text!, "tag": self.imagedescription.text!, "url": urlText])
                             return
                             }
                         })
@@ -78,11 +80,21 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("in camera view controller")
+        print(valuetolabel)
+        
+        self.patientname.text = valuetolabel
+        self.patientname.delegate = self
+        self.imagedescription.delegate = self
         progressBar.isHidden = true
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
          view.addGestureRecognizer(tapGesture)
         // Do any additional setup after loading the view.
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+        }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
