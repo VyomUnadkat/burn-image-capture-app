@@ -70,6 +70,11 @@ PODS:
   - InstaZoom (0.0.2)
   - IQKeyboardManagerSwift (6.5.6)
   - leveldb-library (1.22)
+  - LibTorch (1.7.1):
+    - LibTorch/Core (= 1.7.1)
+  - LibTorch/Core (1.7.1):
+    - LibTorch/Torch
+  - LibTorch/Torch (1.7.1)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
     - nanopb/encode (= 2.30906.0)
@@ -83,6 +88,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - InstaZoom
   - IQKeyboardManagerSwift
+  - LibTorch (~> 1.7.0)
 
 SPEC REPOS:
   trunk:
@@ -100,6 +106,7 @@ SPEC REPOS:
     - InstaZoom
     - IQKeyboardManagerSwift
     - leveldb-library
+    - LibTorch
     - nanopb
     - PromisesObjC
 
@@ -118,9 +125,10 @@ SPEC CHECKSUMS:
   InstaZoom: 96daa051cd6cc84c57ece00e89f1a30e9e0d9f60
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  LibTorch: cef57cf03fbb7fcc798b9f59dde4302c47d3c50b
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: c6e2e0619583e3a818ad6807f0128f2b59f0be6c
+PODFILE CHECKSUM: b5ba2b72a27f6fb2fa4d8e6d23e2d77c63f9a87d
 
 COCOAPODS: 1.10.0

@@ -9,6 +9,7 @@ target 'medicalApp' do
   pod 'Firebase/Database'
   pod 'InstaZoom'
   pod 'IQKeyboardManagerSwift'
+  pod 'LibTorch', '~>1.7.0'
   
 
   # Pods for medicalApp

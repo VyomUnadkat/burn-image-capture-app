@@ -65,7 +65,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
                             if let urlText = url?.absoluteString {
                                 print("this  is the url")
                                 print(urlText)
-                                self.ref.child("users").child(randomID).setValue(["id": randomID, "name": self.patientname.text!, "tag": self.imagedescription.text!, "url": urlText])
+                                self.ref.child("users").child(randomID).setValue(["id": randomID, "name": self.patientname.text!, "tag": self.imagedescription.text!, "url": urlText, "age": "0", "sex": "nil", "race": "nil", "date_injury": "nil", "date_admission": "nil", "post_burn_date": "nil", "mechanism": "", "TBSA": "", "surfacearea": "", "thickness": ""])
                             return
                             }
                         })

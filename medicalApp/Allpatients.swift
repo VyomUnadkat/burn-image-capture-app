@@ -29,13 +29,9 @@ class Allpatients: UIViewController, UITableViewDelegate, UITableViewDataSource 
             return message1.name! < message2.name!
         }
         self.user = Array(Set(self.user))
-        print("I am here")
+        //print("I am here")
         tableView.delegate = self
         tableView.dataSource = self
-        
-
-        
-        // Do any additional setup after loading the view.
     }
     
    
@@ -94,48 +90,38 @@ class Allpatients: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 print("this is the name value")
                 if !self.uniquevalues.contains(namevalue?["name"] as! String){
                     if let dictionaryy = snapshot.value as? [String: AnyObject]{
-                        print(dictionaryy.keys)
+                    //print(dictionaryy.keys)
                     let user = User()
                     self.user.append(user)
-                    
-                        
 
-                    //self.user = Array(Set(self.user))
-                        
-                    
-//                        self.user.sortInPlace({(message1, message2) -> Bool in
-//                            return message1.name? < message2.name
-//                        })
-                    //self.user.sort(by: {$0["name"] < $1["name"]})
-                    //print(dictionaryy["name"])
                     user.uniquevalue = dictionaryy["id"] as! String
                     user.name = dictionaryy["name"] as! String
                     user.tag = dictionaryy["tag"] as! String
                     user.url = dictionaryy["url"] as! String
-                    print(user.name, user.tag, user.url, user.uniquevalue)
-                    print("now next")
-                    print(user)
+                    user.age = dictionaryy["age"] as! String
+                    user.sex = dictionaryy["sex"] as! String
+                    user.race = dictionaryy["race"] as! String
+                    user.date_injury = dictionaryy["date_injury"] as! String
+                    user.date_admission = dictionaryy["date_admission"] as! String
+                    user.mechanism = dictionaryy["mechanism"] as! String
+                    user.postburndate = dictionaryy["post_burn_date"] as! String
+                    user.TBSA = dictionaryy["TBSA"] as! String
+                    user.surfacearea = dictionaryy["surfacearea"] as! String
+                    user.thickness = dictionaryy["thickness"] as! String
+                    //print(user.name, user.tag, user.url, user.uniquevalue, user.age, user.sex, user.race, user.date_injury)
+                    //print("now next")
+                    //print(user)
                 }
                     self.uniquevalues.append(namevalue?["name"] as! String)
                     
                     DispatchQueue.global(qos: .background).async {
-
-                        // Background Thread
-
                         DispatchQueue.main.async {
-                            // Run UI Updates
                             self.tableView.reloadData()
                         }
                     }
                 }
             }, withCancel: nil)
         }
-    
-    
-    
-    
-    
-
 }
 
 

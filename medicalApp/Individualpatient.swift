@@ -11,26 +11,68 @@ import Firebase
 import InstaZoom
 
 
-class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate{
+    
+    
     
     var datatopass: String?
     @IBOutlet weak var searchbaritem: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     let cellId = "cellId"
     var uniquevalues = [String]()
+    
+    var optionstoselect = [String]()
 
     var user = [User]()
+    var filteresuser = [User]()
+    
+    
+    let searchController = UISearchController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = nameofpatient?.name as? String
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.datatopass = ""
+        tableView.register(CutomizedTableViewCell.self, forCellReuseIdentifier: cellId)
+        
+        optionstoselect.append("All")
+        getpatients()
+
+        
+        
+
+        print(nameofpatient?.name)
+        self.uniquevalues.append((nameofpatient?.name)!)
+    }
+    
+    func initSearchController(){
+        searchController.loadViewIfNeeded()
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.enablesReturnKeyAutomatically = false
+        searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        definesPresentationContext = true
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        print("I am initialising the options")
+        print(self.optionstoselect)
+        searchController.searchBar.scopeButtonTitles = self.optionstoselect
+        searchController.searchBar.delegate = self
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchController.isActive{
+            return filteresuser.count
+        }
         return user.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "detailimage", sender: self)
-//    }
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,21 +80,44 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
         print(user[indexPath.row].url)
         
         performSegue(withIdentifier: "detailimage", sender: self)
-        
-       
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? IndividualImage{
-            destination.myStringValue = user[tableView.indexPathForSelectedRow!.row]
+            if searchController.isActive{
+                destination.myStringValue = filteresuser[tableView.indexPathForSelectedRow!.row]
+            }
+            else{
+                destination.myStringValue = user[tableView.indexPathForSelectedRow!.row]
+            }
         }
     }
     
     
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scopeButton = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        let searchText = searchBar.text!
+        
+        filterForSearchTextAndScopeButton(searchText: searchText, scopeButton: scopeButton)
+    }
     
-    
-    
+    func filterForSearchTextAndScopeButton(searchText: String, scopeButton: String = "All") {
+        
+        filteresuser = [User]()
+        
+        for patient in user{
+            if patient.tag!.lowercased().contains(scopeButton.lowercased()) || patient.tag!.lowercased().contains(searchText.lowercased()){
+                filteresuser.append(patient)
+            }
+        }
+        
+        if scopeButton == "All" && searchText == ""{
+            filteresuser = user
+        }
+        
+        tableView.reloadData()
+    }
     
    
     
@@ -61,43 +126,36 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CutomizedTableViewCell
-        cell.mytag?.text = user[indexPath.row].tag?.capitalized
-        cell.selectionStyle = .none
-        cell.myimage.isPinchable = true
-        var usertopass = user[indexPath.row].url
-        self.datatopass = usertopass
         
-        if let profileImage = user[indexPath.row].url{
-            cell.myimage?.loadimagefromcache(urlString: profileImage)
+        if searchController.isActive{
+            cell.mytag?.text = filteresuser[indexPath.row].tag?.capitalized
+            cell.selectionStyle = .none
+            cell.myimage.isPinchable = true
+            var usertopass = filteresuser[indexPath.row].url
+            self.datatopass = usertopass
+            
+            if let profileImage = filteresuser[indexPath.row].url{
+                cell.myimage?.loadimagefromcache(urlString: profileImage)
+            }
         }
-        
-        
+        else{
+            cell.mytag?.text = user[indexPath.row].tag?.capitalized
+            cell.selectionStyle = .none
+            cell.myimage.isPinchable = true
+            var usertopass = user[indexPath.row].url
+            self.datatopass = usertopass
+            
+            if let profileImage = user[indexPath.row].url{
+                cell.myimage?.loadimagefromcache(urlString: profileImage)
+            }
+        }
         
         return cell
         
     }
     
-    
-    
     var nameofpatient: User?
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = nameofpatient?.name as? String
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.datatopass = ""
-        tableView.register(CutomizedTableViewCell.self, forCellReuseIdentifier: cellId)
-        //tableView.register(UICell.self, forCellReuseIdentifier: cellId)
-        
-        getpatients()
-
-        print(nameofpatient?.name)
-        self.uniquevalues.append((nameofpatient?.name)!)
-
-        // Do any additional setup after loading the view.
-    }
     
     @objc func menuButtonTapped(sender: UIBarButtonItem) {
 
@@ -122,16 +180,22 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
                     let user = User()
                     self.user.append(user)
                     self.user = Array(Set(self.user))
-                    //print(dictionaryy["name"])
                     user.name = dictionaryy["name"] as! String
                     user.tag = dictionaryy["tag"] as! String
                     user.url = dictionaryy["url"] as! String
                     user.uniquevalue = dictionaryy["id"] as! String
-                        print(user.name, user.tag, user.url, user.uniquevalue)
-                    print("now next")
-                    print(user)
+                    user.age = dictionaryy["age"] as! String
+                    user.sex = dictionaryy["sex"] as! String
+                    user.race = dictionaryy["race"] as! String
+                    user.date_injury = dictionaryy["date_injury"] as! String
+                    user.date_admission = dictionaryy["date_admission"] as! String
+                    user.mechanism = dictionaryy["mechanism"] as! String
+                    user.postburndate = dictionaryy["post_burn_date"] as! String
+                    user.TBSA = dictionaryy["TBSA"] as! String
+                    user.surfacearea = dictionaryy["surfacearea"] as! String
+                    user.thickness = dictionaryy["thickness"] as! String
+                    self.optionstoselect.append(user.tag!)
                 }
-                    //self.uniquevalues.append(namevalue?["name"] as! String)
                     
                     DispatchQueue.global(qos: .background).async {
 
@@ -139,11 +203,13 @@ class Individualpatient: UIViewController, UITableViewDelegate, UITableViewDataS
 
                         DispatchQueue.main.async {
                             // Run UI Updates
+                            self.initSearchController()
                             self.tableView.reloadData()
                         }
                     }
                 }
             }, withCancel: nil)
+        initSearchController()
         }
 
 

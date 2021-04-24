@@ -17,8 +17,7 @@ class UserViewController: UITableViewController {
         
         
         tableView.register(UICell.self, forCellReuseIdentifier: cellId)
-        //tableView.rowHeight = UITableView.automaticDimension
-        //tableView.estimatedRowHeight = 150
+
         getpatients()
     }
     
@@ -36,11 +35,7 @@ class UserViewController: UITableViewController {
                     
                     
                     DispatchQueue.global(qos: .background).async {
-
-                        // Background Thread
-
                         DispatchQueue.main.async {
-                            // Run UI Updates
                             self.tableView.reloadData()
                         }
                     }
@@ -50,13 +45,11 @@ class UserViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return user.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
-            //let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
             
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UICell
             let users = user[indexPath.row]
@@ -108,7 +101,6 @@ class UICell: UITableViewCell{
     var profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        //imageView.layer.cornerRadius = 50
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         return imageView
@@ -130,9 +122,6 @@ class UICell: UITableViewCell{
         profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         profileImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 350).isActive = true
-        //profileImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        //profileImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 30).isActive = true
-        
         messageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         messageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         messageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
